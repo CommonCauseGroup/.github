@@ -1,0 +1,54 @@
+name: ♿ Accessibility problem
+description: Something is hard or impossible to use
+labels: ["accessibility", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        These get treated as bugs, not as enhancements, and they are not
+        queued behind features.
+
+        You do not need to know a WCAG number to file one. "I could not get to
+        the button with the keyboard" is a complete report.
+
+  - type: textarea
+    id: barrier
+    attributes:
+      label: What could you not do?
+      description: What you were trying to do, and where it stopped.
+    validations:
+      required: true
+
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Which product and which screen.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: how
+    attributes:
+      label: How were you using it?
+      description: Tick anything relevant. All optional — share only what you want to.
+      options:
+        - label: Keyboard only
+        - label: A screen reader
+        - label: Zoom above 150%, or a large text setting
+        - label: Reduced motion, high contrast, or forced colours
+        - label: Voice control or a switch device
+        - label: Light mode
+        - label: Dark mode
+
+  - type: input
+    id: tech
+    attributes:
+      label: Assistive technology, browser and operating system
+      description: Only if it is relevant and you are comfortable saying.
+      placeholder: "NVDA 2024.1, Firefox 124, Windows 11"
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened

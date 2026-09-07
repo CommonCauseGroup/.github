@@ -1,0 +1,103 @@
+name: 🐛 Bug report
+description: Something behaves differently from how it should
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time. Two things before you start:
+
+        **Redact anything about a real person.** Logs, screenshots, `.har` files
+        and stack traces routinely carry names, email addresses and session
+        tokens. Replace them rather than trusting a black rectangle.
+
+        **Never paste an API key or an `Authorization` header.** If you already
+        have somewhere, revoke the key first — deleting the comment does not
+        remove it from the edit history or from notification emails.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, including the error message in full.
+      placeholder: |
+        Opening an expired invitation link returns a 500 rather than a message
+        saying the invitation has lapsed. The response body is:
+
+        ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+      description: One or two sentences is plenty.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: >-
+        Precisely enough that we can follow them without guessing. A `curl`
+        command with the key removed is ideal.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Does it happen every time?
+      description: >-
+        The question everybody skips, and the one that changes the
+        investigation most. "Sometimes" and "always" are different bugs.
+      options:
+        - Every time
+        - Most times
+        - Occasionally, and I cannot predict it
+        - It happened once
+    validations:
+      required: true
+
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Which product, host or package — and the version or commit if you know it.
+      placeholder: "Cloud console, commoncause.clouds, seen on 4 March"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system
+      description: Only needed if it is something you saw in a browser.
+      placeholder: "Firefox 124, Ubuntu 24.04, dark mode, 150% zoom"
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: >-
+        Workarounds you found, when it started, what you had changed just
+        before, or a guess at the cause. Guesses are welcome and never held
+        against you.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send it
+      options:
+        - label: I have removed real people's data, keys and tokens from everything above.
+          required: true
+        - label: This is not a security vulnerability. (If it is, please close this and use the Security tab instead.)
+          required: true
+        - label: I searched the existing issues, including closed ones.
+          required: false

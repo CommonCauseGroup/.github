@@ -1,0 +1,73 @@
+name: 💡 Idea or change request
+description: Something that should work differently, or does not exist yet
+labels: ["enhancement", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are genuinely welcome, and so is an idea that turns out to be a
+        no — a clear no with a reason is a useful outcome and we will give you
+        one rather than letting this go quiet.
+
+        Please describe the **problem** before the solution. What you were
+        trying to do is often the part we can help with; what the code should
+        be is the part we will argue about happily.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do, and what gets in the way?
+      description: >-
+        The situation, not the feature. "I administer four clinics and cannot
+        tell which invitations are still outstanding without opening each one."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you think should happen
+      description: Roughly. A sketch, a paragraph or an API shape are all fine.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you have tried or considered
+      description: >-
+        Including workarounds that half-work. Knowing the shape of the
+        workaround tells us a lot about the real requirement.
+
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who is this for?
+      options:
+        - A person using one of our products
+        - An organisation administering itself on Manage
+        - Someone building against our API
+        - Someone contributing to this codebase
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: considerations
+    attributes:
+      label: Does this touch any of these?
+      description: >-
+        Tick anything that applies — it is not a hurdle, it just tells us who
+        needs to look. Unticked is a perfectly normal answer.
+      options:
+        - label: It would send data to, or load something from, a domain Common Cause does not own.
+        - label: It involves personal or clinical information, or changes who can see some.
+        - label: It changes wording that a person in distress might read.
+        - label: It changes an existing API in a way that would break somebody's integration.
+
+  - type: checkboxes
+    id: offer
+    attributes:
+      label: Would you like to build it?
+      options:
+        - label: I would be happy to open a pull request if you think it is a good idea.

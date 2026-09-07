@@ -1,0 +1,43 @@
+name: 📚 Documentation problem
+description: Something we wrote is wrong, missing, or assumed you already knew
+labels: ["documentation", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        These are some of the most useful issues we get. The person who just
+        hit the gap is the only one who can still see it — a week from now you
+        will have internalised the missing step like everyone else.
+
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: A URL, a file path, or the name of the page.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong with it
+      description: >-
+        Wrong, out of date, missing, contradicts another page, or assumed
+        something it never told you. Any of those.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you were trying to find out
+      description: >-
+        The question you arrived with. This is usually the most useful field on
+        the form, because the fix is often a heading rather than a paragraph.
+
+  - type: checkboxes
+    id: offer
+    attributes:
+      label: Would you like to fix it?
+      options:
+        - label: I would be happy to open a pull request.

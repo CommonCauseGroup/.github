@@ -1,0 +1,27 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🆘 You need to talk to somebody now
+    url: https://findahelpline.com
+    about: >-
+      GitHub is not staffed for a crisis and everything here is public. In the
+      UK call 999 in an emergency, or Samaritans free on 116 123, any hour. This
+      link finds the equivalent service wherever you are.
+
+  - name: 🔐 A security vulnerability
+    url: https://github.com/CommonCauseGroup/.github/blob/main/SECURITY.md
+    about: >-
+      Please report it privately — use the Report a vulnerability button under
+      this repository's Security tab. A public issue is a working exploit with
+      an audience.
+
+  - name: 👤 A problem with your account, licence or billing
+    url: https://github.com/CommonCauseGroup/.github/blob/main/SUPPORT.md
+    about: >-
+      Our support team can see your account and GitHub maintainers cannot.
+      Please do not post account details or screenshots in a public issue.
+
+  - name: 💬 A question, or "am I holding this wrong?"
+    url: https://github.com/orgs/CommonCauseGroup/discussions
+    about: >-
+      Ask in Discussions. Questions are welcome — an unanswered one usually
+      means our documentation failed, which is our problem, not yours.
