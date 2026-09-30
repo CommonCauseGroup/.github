@@ -67,7 +67,8 @@ their own details, devices and sessions.
 
 ### ☁️ Cloud
 The catalogue of what we offer, the projects a partner organises their
-integration into, and the API credentials that come out of it.
+integration into, the API credentials that come out of it, and the usage they
+are billed on.
 
 </td>
 </tr>
@@ -92,7 +93,8 @@ a person first.
 
 ### 🔌 Console
 The estate's public API. One host, one key, and the products a project has
-enabled — no `/v1`, no `/api`, resources directly under the host.
+enabled — no `/api`, each product under its own prefix, and every call metered
+so a project can see exactly what it used.
 
 </td>
 </tr>
